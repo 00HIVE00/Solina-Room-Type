@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solina Room Type</title>
+    <link rel="preload" href="images/Solina-Logo.png" as="image">
+    <link rel="preload" href="images/angga-pool/angga1.webp" as="image">
+    <link rel="preload" href="images/angga-pool/pool1.webp" as="image">
     <style>
         * {
             margin: 0;
@@ -269,6 +272,20 @@
             background-position: center;
         }
 
+        .carousel-slide[data-bg] {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .kamalig-duwa-bg {
+            grid-template-columns: 1fr;
+        }
+
+        .kamalig-duwa-pane {
+            background-size: cover;
+            background-position: center;
+        }
+
         .carousel-dots {
             position: absolute;
             bottom: 30px;
@@ -357,7 +374,7 @@
 </head>
 <body>
     <div class="logo-header">
-        <img src="images/Solina-Logo.png" alt="Solina Beach & Nature Resort">
+        <img src="images/Solina-Logo.png" alt="Solina Beach & Nature Resort" loading="eager" fetchpriority="high">
     </div>
     
     <div class="main-content">
@@ -366,8 +383,8 @@
         <div class="carousel-container">
             <div class="carousel-slide active" data-full-src="images/angga-pool/angga1.webp">
                 <div class="carousel-split" aria-hidden="true">
-                    <div class="carousel-pane" style="background-image: url('images/angga-pool/angga1.webp');"></div>
-                    <div class="carousel-pane" style="background-image: url('images/angga-pool/pool1.webp');"></div>
+                    <div class="carousel-pane" data-bg="images/angga-pool/angga1.webp"></div>
+                    <div class="carousel-pane" data-bg="images/angga-pool/pool1.webp"></div>
                 </div>
                 <div class="slide-content">
                     <h2>Angga and Pool</h2>
@@ -375,77 +392,80 @@
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/balay-hari/room.webp" style="background-image: url('images/balay-hari/room.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/balay-hari/room.webp" data-bg="images/balay-hari/room.webp">
                 <div class="slide-content">
                     <h2>Balay Hari</h2>
                     <p>Enjoy a cozy stay at Balay Hari.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/balay-palangga/room1.webp" style="background-image: url('images/balay-palangga/room1.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/balay-palangga/room1.webp" data-bg="images/balay-palangga/room1.webp">
                 <div class="slide-content">
                     <h2>Balay Palangga</h2>
                     <p>Experience comfort and warmth at Balay Palangga.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/balay-reyna/reyna1.webp" style="background-image: url('images/balay-reyna/reyna1.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/balay-reyna/reyna1.webp" data-bg="images/balay-reyna/reyna1.webp">
                 <div class="slide-content">
                     <h2>Balay Reyna</h2>
                     <p>Stay in style at Balay Reyna.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/higdaan-duwa/duwa.webp" style="background-image: url('images/higdaan-duwa/duwa.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/higdaan-duwa/duwa.webp" data-bg="images/higdaan-duwa/duwa.webp">
                 <div class="slide-content">
                     <h2>Higdaan Duwa</h2>
                     <p>Perfect for sharing at Higdaan Duwa.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/higdaan-reyna/reyna1.webp" style="background-image: url('images/higdaan-reyna/reyna1.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/higdaan-reyna/reyna1.webp" data-bg="images/higdaan-reyna/reyna1.webp">
                 <div class="slide-content">
                     <h2>Higdaan Reyna</h2>
                     <p>Enjoy queen-sized comfort at Higdaan Reyna.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/kamalig-apat/kamalig.webp" style="background-image: url('images/kamalig-apat/kamalig.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/kamalig-apat/kamalig.webp" data-bg="images/kamalig-apat/kamalig.webp">
                 <div class="slide-content">
                     <h2>Kamalig Apat</h2>
                     <p>Spacious retreat at Kamalig Apat.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/kamalig-duwa/kamalig1.webp" style="background-image: url('images/kamalig-duwa/kamalig1.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide kamalig-duwa-slide" data-full-src="images/kamalig-duwa/kamalig1.webp">
+                <div class="carousel-split kamalig-duwa-bg" aria-hidden="true">
+                    <div class="carousel-pane kamalig-duwa-pane"></div>
+                </div>
                 <div class="slide-content">
                     <h2>Kamalig Duwa</h2>
                     <p>Cozy and inviting Kamalig Duwa.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/kamalig-payaw/KP.webp" style="background-image: url('images/kamalig-payaw/KP.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/kamalig-payaw/KP.webp" data-bg="images/kamalig-payaw/KP.webp">
                 <div class="slide-content">
                     <h2>Kamalig Payaw</h2>
                     <p>Nature-inspired escape at Kamalig Payaw.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/kamalig-reyna/SOL_ROOM51.webp" style="background-image: url('images/kamalig-reyna/SOL_ROOM51.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/kamalig-reyna/SOL_ROOM51.webp" data-bg="images/kamalig-reyna/SOL_ROOM51.webp">
                 <div class="slide-content">
                     <h2>Kamalig Reyna</h2>
                     <p>Queenly comfort at Kamalig Reyna.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/puluy-an-hari/SOL_ROOM102.webp" style="background-image: url('images/puluy-an-hari/SOL_ROOM102.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/puluy-an-hari/SOL_ROOM102.webp" data-bg="images/puluy-an-hari/SOL_ROOM102.webp">
                 <div class="slide-content">
                     <h2>Puluy-an Hari</h2>
                     <p>Royal experience at Puluy-an Hari.</p>
                 </div>
             </div>
 
-            <div class="carousel-slide" data-full-src="images/puluy-an-reyna/SOL_ROOM1.webp" style="background-image: url('images/puluy-an-reyna/SOL_ROOM1.webp'); background-size: cover; background-position: center;">
+            <div class="carousel-slide" data-full-src="images/puluy-an-reyna/SOL_ROOM1.webp" data-bg="images/puluy-an-reyna/SOL_ROOM1.webp">
                 <div class="slide-content">
                     <h2>Puluy-an Reyna</h2>
                     <p>Elegant stay at Puluy-an Reyna.</p>
@@ -475,142 +495,142 @@
         <div class="room-section" id="angga-pool">
             <h2 class="room-section-title">Family Room</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/family-room/1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/4.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/5.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/6.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/7.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/8.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/9.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/family-room/10.webp');"></div>
+                <div class="gallery-image" data-bg="images/family-room/1.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/2.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/3.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/4.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/5.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/6.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/7.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/8.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/9.webp"></div>
+                <div class="gallery-image" data-bg="images/family-room/10.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="balay-reyna">
             <h2 class="room-section-title">Balay Reyna</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/balay-reyna/reyna1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-reyna/reyna2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-reyna/reyna3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-reyna/reyna4.webp');"></div>
+                <div class="gallery-image" data-bg="images/balay-reyna/reyna1.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-reyna/reyna2.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-reyna/reyna3.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-reyna/reyna4.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="balay-hari">
             <h2 class="room-section-title">Balay Hari</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/balay-hari/room.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-hari/room1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-hari/room2.webp');"></div>
+                <div class="gallery-image" data-bg="images/balay-hari/room.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-hari/room1.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-hari/room2.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="puluy-an-reyna">
             <h2 class="room-section-title">Puluy-An Reyna</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/puluy-an-reyna/SOL_OUTDOORS2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-reyna/SOL_ROOM1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-reyna/SOL_ROOM106.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-reyna/SOL_ROOM114.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-reyna/SOL_ROOM26.webp');"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-reyna/SOL_OUTDOORS2.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-reyna/SOL_ROOM1.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-reyna/SOL_ROOM106.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-reyna/SOL_ROOM114.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-reyna/SOL_ROOM26.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="puluy-an-hari">
             <h2 class="room-section-title">Puluy-An Hari</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/puluy-an-hari/SOL_OUTDOORS2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-hari/SOL_ROOM33.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-hari/SOL_ROOM102.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-hari/SOL_ROOM106\ \(1\).webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/puluy-an-hari/SOL_ROOM115.webp');"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-hari/SOL_OUTDOORS2.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-hari/SOL_ROOM33.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-hari/SOL_ROOM102.webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-hari/SOL_ROOM106 (1).webp"></div>
+                <div class="gallery-image" data-bg="images/puluy-an-hari/SOL_ROOM115.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="balay-palangga">
             <h2 class="room-section-title">Balay Palangga</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/balay-palangga/room1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-palangga/room2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-palangga/room3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/balay-palangga/room4.webp');"></div>
+                <div class="gallery-image" data-bg="images/balay-palangga/room1.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-palangga/room2.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-palangga/room3.webp"></div>
+                <div class="gallery-image" data-bg="images/balay-palangga/room4.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="kamalig-payaw">
             <h2 class="room-section-title">Kamalig Payaw</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/kamalig-payaw/KP.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-payaw/KPP.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-payaw/KPPP.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-payaw/KPPP4.webp');"></div>
+                <div class="gallery-image" data-bg="images/kamalig-payaw/KP.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-payaw/KPP.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-payaw/KPPP.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-payaw/KPPP4.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="kamalig-apat">
             <h2 class="room-section-title">Kamalig Apat</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/kamalig-apat/kamalig.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-apat/kamalig1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-apat/kamalig2.webp');"></div>
+                <div class="gallery-image" data-bg="images/kamalig-apat/kamalig.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-apat/kamalig1.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-apat/kamalig2.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="kamalig-duwa">
             <h2 class="room-section-title">Kamalig Duwa</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/kamalig-duwa/kamalig1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-duwa/kamalig2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-duwa/kamalig3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-duwa/kamalig4.webp');"></div>
+                <div class="gallery-image" data-bg="images/kamalig-duwa/kamalig1.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-duwa/kamalig2.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-duwa/kamalig3.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-duwa/kamalig4.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="kamalig-reyna">
             <h2 class="room-section-title">Kamalig Reyna</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/kamalig-reyna/SOL_ROOM51.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-reyna/SOL_ROOM53.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-reyna/SOL_ROOM54.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-reyna/SOL_ROOM55.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/kamalig-reyna/SOL_ROOM76\ -\ Copy.webp');"></div>
+                <div class="gallery-image" data-bg="images/kamalig-reyna/SOL_ROOM51.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-reyna/SOL_ROOM53.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-reyna/SOL_ROOM54.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-reyna/SOL_ROOM55.webp"></div>
+                <div class="gallery-image" data-bg="images/kamalig-reyna/SOL_ROOM76 - Copy.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="higdaan-duwa">
             <h2 class="room-section-title">Higdaan Duwa</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/higdaan-duwa/duwa.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-duwa/duwa1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-duwa/duwa2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-duwa/duwa3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-duwa/duwa4.webp');"></div>
+                <div class="gallery-image" data-bg="images/higdaan-duwa/duwa.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-duwa/duwa1.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-duwa/duwa2.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-duwa/duwa3.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-duwa/duwa4.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="higdaan-reyna">
             <h2 class="room-section-title">Higdaan Reyna</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/higdaan-reyna/reyna.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-reyna/reyna1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-reyna/reyna2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-reyna/reyna3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-reyna/reyna4.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/higdaan-reyna/reyna5.webp');"></div>
+                <div class="gallery-image" data-bg="images/higdaan-reyna/reyna.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-reyna/reyna1.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-reyna/reyna2.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-reyna/reyna3.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-reyna/reyna4.webp"></div>
+                <div class="gallery-image" data-bg="images/higdaan-reyna/reyna5.webp"></div>
             </div>
         </div>
 
         <div class="room-section" id="angga-pool">
             <h2 class="room-section-title">Angga and Pool</h2>
             <div class="room-gallery">
-                <div class="gallery-image" style="background-image: url('images/angga-pool/angga1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/angga-pool/angga2.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/angga-pool/angga3.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/angga-pool/angga4.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/angga-pool/pool1.webp');"></div>
-                <div class="gallery-image" style="background-image: url('images/angga-pool/pool2.webp');"></div>
+                <div class="gallery-image" data-bg="images/angga-pool/angga1.webp"></div>
+                <div class="gallery-image" data-bg="images/angga-pool/angga2.webp"></div>
+                <div class="gallery-image" data-bg="images/angga-pool/angga3.webp"></div>
+                <div class="gallery-image" data-bg="images/angga-pool/angga4.webp"></div>
+                <div class="gallery-image" data-bg="images/angga-pool/pool1.webp"></div>
+                <div class="gallery-image" data-bg="images/angga-pool/pool2.webp"></div>
             </div>
         </div>
 
@@ -620,7 +640,7 @@
     <!-- Lightbox overlay -->
     <div id="lightboxOverlay" class="lightbox-overlay">
         <button class="lightbox-close" type="button" onclick="closeLightbox()">&times;</button>
-        <img id="lightboxImage" src="" alt="Room photo">
+        <img id="lightboxImage" src="" alt="Room photo" loading="lazy">
     </div>
 
     <script>
@@ -629,6 +649,32 @@
         const dots = document.querySelectorAll('.dot');
         let autoPlayInterval;
         const autoPlayDelay = 4000;
+
+        const KAMALIG_DUWA_IMAGES = ['images/kamalig-duwa/kamalig1.webp', 'images/kamalig-duwa/kamalig2.webp', 'images/kamalig-duwa/kamalig3.webp', 'images/kamalig-duwa/kamalig4.webp'];
+        let kamaligDuwaIndex = 0;
+        let kamaligDuwaInterval;
+
+        function animateKamaligDuwa() {
+            const pane = document.querySelector('.kamalig-duwa-slide.active .kamalig-duwa-pane');
+            if (!pane) return;
+            pane.style.backgroundImage = `url('${KAMALIG_DUWA_IMAGES[kamaligDuwaIndex]}')`;
+            kamaligDuwaIndex = (kamaligDuwaIndex + 1) % KAMALIG_DUWA_IMAGES.length;
+        }
+
+        function startKamaligDuwaAnimation() {
+            stopKamaligDuwaAnimation();
+            const slide = document.querySelector('.kamalig-duwa-slide.active');
+            if (!slide) return;
+            const pane = slide.querySelector('.kamalig-duwa-pane');
+            if (!pane) return;
+            pane.style.backgroundImage = `url('${KAMALIG_DUWA_IMAGES[0]}')`;
+            kamaligDuwaIndex = 1;
+            kamaligDuwaInterval = setInterval(animateKamaligDuwa, 3000);
+        }
+
+        function stopKamaligDuwaAnimation() {
+            clearInterval(kamaligDuwaInterval);
+        }
         
         function showSlide(n) {
             slides.forEach(slide => slide.classList.remove('active'));
@@ -645,6 +691,11 @@
             slides[currentSlide].classList.add('active');
             if (dots[currentSlide]) {
                 dots[currentSlide].classList.add('active');
+            }
+
+            stopKamaligDuwaAnimation();
+            if (slides[currentSlide].classList.contains('kamalig-duwa-slide')) {
+                startKamaligDuwaAnimation();
             }
         }
         
@@ -681,6 +732,22 @@
         }
         
         startAutoPlay();
+
+        function applyBg(el) {
+            const bg = el.getAttribute('data-bg');
+            if (bg) el.style.backgroundImage = `url('${bg}')`;
+        }
+        const firstSlide = document.querySelector('.carousel-slide.active');
+        if (firstSlide) firstSlide.querySelectorAll('[data-bg]').forEach(applyBg);
+        const bgObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                applyBg(el);
+                bgObserver.unobserve(el);
+            });
+        }, { rootMargin: '100px', threshold: 0.01 });
+        document.querySelectorAll('[data-bg]').forEach(el => bgObserver.observe(el));
         
         const lightboxOverlay = document.getElementById('lightboxOverlay');
         const lightboxImage = document.getElementById('lightboxImage');
@@ -708,14 +775,9 @@
             }
         });
         
-        document.querySelectorAll('.room-gallery .gallery-image').forEach(tile => {
-            const bg = tile.style.backgroundImage;
-            if (!bg) return;
-        
-            const match = bg.match(/url\(["']?(.*?)["']?\)/);
-            const src = match ? match[1] : null;
+        document.querySelectorAll('.room-gallery .gallery-image[data-bg]').forEach(tile => {
+            const src = tile.getAttribute('data-bg');
             if (!src) return;
-        
             tile.addEventListener('click', () => openLightbox(src));
         });
         
